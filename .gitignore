@@ -1,52 +1,42 @@
-# Prerequisites
-*.d
+# Arquivos de compilação do MikroC
+/src/*.elf
+/src/*.map
+/src/*.hex
+/src/*.lst
+/src/*.o
+/src/*.d
+/src/*.bak
+/src/*.cof
+/src/*.sym
 
-# Object files
-*.o
-*.ko
+# Arquivos temporários do IDE
+*.bak
 *.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
 *.pdb
+*.idb
+*.iobj
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Diretórios de build
+build/
+
+# Diretórios de backup
+_backup/
+
+# Arquivos de configuração de IDE
+.mikroc
+*.MCP
+*.MCU
+
+# Arquivos de logs
+*.log
+
+# Arquivos do Proteus
+*.ids
+*.pro
+*.vsm
+*.amk
+*.bld
+*.sch
+*.pcb
+*.pdsbak
+*.workspace
