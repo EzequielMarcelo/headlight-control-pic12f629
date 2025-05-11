@@ -1,5 +1,5 @@
 #line 1 "C:/Users/Marcelo/Documents/Projetos/Microcontroladores/headlight-control-pic12f629/src/headlight_control.c"
-#line 32 "C:/Users/Marcelo/Documents/Projetos/Microcontroladores/headlight-control-pic12f629/src/headlight_control.c"
+#line 33 "C:/Users/Marcelo/Documents/Projetos/Microcontroladores/headlight-control-pic12f629/src/headlight_control.c"
 volatile unsigned long millis_count = 0;
 unsigned char turn_off_command = 0;
 
@@ -26,12 +26,12 @@ void main()
  TMR0 = 255 - 4;
  WPU |= (1 << 0);
  WPU |= (1 << 1);
- TRISIO = 0b00000011;
+ TRISIO = 0b0001011;
  GPIO = 0x00;
 
  while(1) {
 
- if ( GP0_bit  == 0) {
+ if (( GP0_bit  == 0)&&( GP3_bit  == 0)) {
  millis_count = 0;
  turn_off_command = 1;
  }
